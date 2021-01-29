@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Apprenantcontrollerview">
+   <children>
+      <Label layoutX="238.0" layoutY="70.0" text="from" />
+      <Button layoutX="522.0" layoutY="350.0" mnemonicParsing="false" text="logout" />
+      <DatePicker fx:id="date1" layoutX="285.0" layoutY="66.0" prefHeight="25.0" prefWidth="108.0" />
+      <DatePicker fx:id="date2" layoutX="449.0" layoutY="66.0" prefHeight="25.0" prefWidth="99.0" />
+      <Label layoutX="421.0" layoutY="70.0" text="to" />
+      <Label layoutX="28.0" layoutY="14.0" text="nom:" />
+      <Label fx:id="namelabel" layoutX="99.0" layoutY="14.0" text="???" />
+      <Label layoutX="485.0" layoutY="14.0" text="promotion" />
+      <Label fx:id="promotion" layoutX="556.0" layoutY="14.0" text="???" />
+      <Button layoutX="551.0" layoutY="66.0" mnemonicParsing="false" onAction="#filtrer" text="filtrer" />
+      <Label layoutX="41.0" layoutY="165.0" text="absencese :" />
+      <Label layoutX="41.0" layoutY="254.0" text="retards :" />
+      <Label fx:id="absence" layoutX="139.0" layoutY="165.0" text="???" />
+      <Label layoutX="139.0" layoutY="254.0" text="???" />
+   </children>
+</AnchorPane>
