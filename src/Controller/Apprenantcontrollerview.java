@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-import Dao.Dao;
+
+import Dao.DatabaseConnection;
 import Dao.UserSession;
 import Models.AbsenceRecord;
 import Models.Apprenant;
@@ -28,6 +29,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class Apprenantcontrollerview implements Initializable {
+	DatabaseConnection db= new DatabaseConnection();
+	 
 	 @FXML
 	    private Button logout;
 	@FXML private  Label namelabel;
@@ -68,7 +71,7 @@ public class Apprenantcontrollerview implements Initializable {
 		try {
 			
 			
-			app=Dao.getApprenant(Integer.parseInt(UserSession.getID()));
+			app=db.getApprenant2(Integer.parseInt(UserSession.getID()));
 			
 			initdata(app);
 			
@@ -88,7 +91,7 @@ public class Apprenantcontrollerview implements Initializable {
 		 type.setCellValueFactory(new PropertyValueFactory <AbsenceRecord, String>("type"));
 		 dateabs.setCellValueFactory(new PropertyValueFactory <AbsenceRecord,Date>("dateabs"));
 		 
-		 listm=Dao.getabsence(date1.getValue().toString(), date2.getValue().toString(), app.getId());
+		 listm=db.getabsence(date1.getValue().toString(), date2.getValue().toString(), app.getId());
 		absence.setItems(listm);
 
 	}
